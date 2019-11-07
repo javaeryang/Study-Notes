@@ -38,6 +38,7 @@ static unsigned long find_database_of(char* soName)//获取libcocos2dlua.so内�
           return revalue;
         }
       }
+      LOGD("===> other cmdline = %s",cmdline);
       memset(cmdline,0,256); //清零
     }
     fclose(fp);
@@ -56,7 +57,7 @@ int new_CalcFunc(void* env,void* jobject)
 { 
   int ret = old_calc(env,jobject);
   LOGD("修改前的ret = %d", ret);
-  return 777;
+  return 98000;
 }
 
 
